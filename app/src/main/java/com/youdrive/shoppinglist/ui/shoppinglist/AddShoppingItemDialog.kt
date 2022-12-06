@@ -2,6 +2,7 @@ package com.youdrive.shoppinglist.ui.shoppinglist
 
 import android.content.Context
 import android.os.Bundle
+import android.view.Window
 import android.widget.EditText
 import android.widget.TextView
 import android.widget.Toast
@@ -10,7 +11,7 @@ import com.youdrive.shoppinglist.R
 import com.youdrive.shoppinglist.data.db.entities.ShoppingItem
 
 class AddShoppingItemDialog(context: Context, var addDialogListener: AddDialogListener) :
-    AppCompatDialog(context) {
+    AppCompatDialog(context, R.style.MyDialogTheme) {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.dialog_add_shopping_item)
